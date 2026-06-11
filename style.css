@@ -112,8 +112,7 @@ transform:translateY(0px);
 
 .navbar{
 
-position:sticky;
-
+position:relative;
 top:0;
 
 z-index:999;
