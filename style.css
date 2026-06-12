@@ -975,18 +975,69 @@ height:60px;
 @media(max-width:480px){
 
 .hero{
-
-padding:120px 20px 60px;
-
+padding:100px 15px 50px;
 }
 
-.stats,
-.service-grid,
-.portfolio-grid,
-.review-grid,
-.why-grid{
+/* Services 2 per row */
+.service-grid{
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
 
+/* Why choose us 2 per row */
+.why-grid{
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
+
+/* Portfolio 2 per row */
+.portfolio-grid{
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
+
+/* Reviews stay single column */
+.review-grid{
 grid-template-columns:1fr;
+}
+
+/* Smaller cards */
+.service-card img{
+height:120px;
+}
+
+.service-card h3{
+font-size:15px;
+padding:12px;
+}
+
+.service-card p{
+display:none;
+}
+
+.service-card span{
+padding:12px;
+font-size:13px;
+}
+
+.why-card{
+padding:18px;
+font-size:14px;
+}
+
+.services,
+.portfolio,
+.why-us,
+.reviews,
+.social-section{
+padding:60px 5%;
+}
+
+.instagram-float{
+width:58px;
+height:58px;
+font-size:26px;
+}
 
 }
 
