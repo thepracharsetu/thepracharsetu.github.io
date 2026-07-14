@@ -1,0 +1,26 @@
+{
+  "name": "The Prachar Setu — Premium Digital Agency",
+  "short_name": "Prachar Setu",
+  "description": "Premium Website Development, Google Business Profile & Digital Marketing agency in India.",
+  "start_url": ".",
+  "id": "/",
+  "display": "standalone",
+  "background_color": "#001133",
+  "theme_color": "#D4AF37",
+  "orientation": "portrait-primary",
+  "categories": ["business", "utilities"],
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
