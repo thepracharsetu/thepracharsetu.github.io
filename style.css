@@ -7,20 +7,21 @@ here* {
 }
 
 body {
-    background-color: #0A192F; /* Deep Luxury Blue background to hold the canvas structure */
+    background-color: #0A192F; /* Deep Luxury Blue canvas base */
     color: #FFFFFF;
     overflow-x: hidden;
 }
 
-/* Luxury Full Page Video Canvas Layer */
+/* Fixed Video Layer Spanning Absolute Page Target Space */
 .video-background {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     z-index: -2;
     overflow: hidden;
+    background-color: #0A192F; /* Prevents frame flashes during shifts */
 }
 
 .video-background video {
@@ -28,19 +29,20 @@ body {
     height: 100%;
     object-fit: cover;
     pointer-events: none;
+    will-change: transform; /* Hardware acceleration trigger for fluid mobile scrolling */
 }
 
 .video-overlay {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background: linear-gradient(180deg, rgba(10, 25, 47, 0.3) 0%, rgba(10, 25, 47, 0.7) 100%);
+    background: linear-gradient(180deg, rgba(10, 25, 47, 0.2) 0%, rgba(10, 25, 47, 0.6) 100%);
     z-index: -1;
 }
 
-/* Premium Navigation Frame */
+/* Premium Navigation Bar Frame */
 nav {
     position: fixed;
     top: 0;
@@ -49,8 +51,9 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(10, 25, 47, 0.8);
+    background: rgba(10, 25, 47, 0.85);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     z-index: 100;
     border-bottom: 3px solid #FFD700;
 }
@@ -79,14 +82,22 @@ nav {
     color: #FFD700;
 }
 
-/* Completely transparent Apple/BMW immersive text layouts */
+/* Immersion Wrapper Layer - Ensures video cuts through down to the footer */
 section {
     min-height: 100vh;
     padding: 140px 8% 80px 8%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: transparent; /* Allows video execution to stay visible across the whole page scroll */
+    background: transparent; /* Remains clear so video runs flawlessly underneath */
+    position: relative;
+    z-index: 2; /* Keeps interactive layers text safe from background clipping */
+}
+
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 h1 {
@@ -128,7 +139,7 @@ p {
     margin-bottom: 30px;
 }
 
-/* Cards configured with transparent White/Blue frost glow filters */
+/* Responsive grid for multi-service arrays */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -138,9 +149,10 @@ p {
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.07);
     border: 2px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     padding: 30px;
     border-radius: 16px;
     transition: all 0.4s ease;
@@ -149,8 +161,8 @@ p {
 .card:hover {
     transform: translateY(-5px);
     border-color: #FFD700;
-    background: rgba(10, 25, 47, 0.6);
-    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+    background: rgba(10, 25, 47, 0.7);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.25);
 }
 
 .card h3 {
@@ -160,27 +172,7 @@ p {
     color: #FFD700;
 }
 
-.card ul {
-    list-style: none;
-    margin-top: 10px;
-}
-
-.card ul li {
-    padding: 6px 0;
-    font-size: 0.95rem;
-    color: #E2E8F0;
-    position: relative;
-    padding-left: 15px;
-}
-
-.card ul li::before {
-    content: '▪';
-    position: absolute;
-    left: 0;
-    color: #FFD700;
-}
-
-/* Interface Action Buttons */
+/* Interactive CTA Anchors */
 .btn {
     display: inline-block;
     padding: 16px 36px;
@@ -202,49 +194,15 @@ p {
 
 .btn:hover {
     transform: scale(1.03);
-    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
 }
 
-/* Contact Inputs wrapped in custom Frost layers */
-form {
-    max-width: 600px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-input, select, textarea {
-    width: 100%;
-    padding: 16px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.05);
-    color: #FFFFFF;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s;
-}
-
-input::placeholder, textarea::placeholder {
-    color: #A0AEC0;
-}
-
-option {
-    background: #0A192F;
-    color: #FFFFFF;
-}
-
-input:focus, select:focus, textarea:focus {
-    border-color: #FFD700;
-    background: rgba(10, 25, 47, 0.9);
-}
-
-/* FAQ Layout elements */
+/* Accordion Component Formats */
 .faq-item {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-radius: 8px;
     margin-bottom: 15px;
     overflow: hidden;
@@ -274,12 +232,14 @@ input:focus, select:focus, textarea:focus {
 }
 
 footer {
-    background: rgba(10, 25, 47, 0.95);
+    background: rgba(10, 25, 47, 0.98);
     color: #FFFFFF;
     padding: 60px 8% 40px 8%;
     text-align: center;
     font-weight: 600;
-    border-top: 1px solid rgba(255, 215, 0, 0.2);
+    position: relative;
+    z-index: 5;
+    border-top: 2px solid rgba(255, 215, 0, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -287,5 +247,5 @@ footer {
     h2 { font-size: 1.8rem; }
     nav { padding: 15px 4%; }
     .nav-links a { margin-left: 10px; font-size: 0.85rem; }
-    section { padding: 100px 5% 40px 5%; }
+    section { padding: 110px 5% 50px 5%; }
 }
