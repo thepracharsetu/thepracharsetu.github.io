@@ -1,4 +1,4 @@
-here<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,14 +10,15 @@ here<!DOCTYPE html>
 </head>
 <body>
 
+    <!-- Target Unified Video Channel Base -->
     <div class="video-background">
-        <!-- Kept exactly inside your custom folder path -->
         <video id="bgVideo" muted playsinline webkit-playsinline preload="auto" width="100%" height="100%">
             <source src="videos/hero-video.mp4" type="video/mp4">
         </video>
     </div>
     <div class="video-overlay"></div>
 
+    <!-- Navigation Bar Core -->
     <nav>
         <div class="logo">THE PRACHAR <span>SETU</span></div>
         <div class="nav-links">
@@ -28,7 +29,7 @@ here<!DOCTYPE html>
         </div>
     </nav>
 
-    <!-- Content Sections (Completely transparent background wrapper layers) -->
+    <!-- 1. Hero Module -->
     <section class="hero-section">
         <div>
             <h1>We Bridge Brands <br>With <span class="highlight">Elite Performance.</span></h1>
@@ -38,93 +39,106 @@ here<!DOCTYPE html>
         </div>
     </section>
 
+    <!-- 2. Why Choose Framework -->
     <section id="why-choose">
         <h2>Why Choose The Prachar Setu</h2>
         <div class="grid-container">
             <div class="card">
                 <h3>Cinematic Architecture</h3>
-                <p>We craft clean interfaces matching the luxury appeal styles seen across top global brand presentations.</p>
+                <p>We craft clean interfaces matching the luxury fluid aesthetic styles seen across iconic corporate web assets.</p>
             </div>
             <div class="card">
                 <h3>Hyper-Local Domination</h3>
-                <p>Engineered to ensure your business structure ranks prominently across target regional hubs.</p>
+                <p>Engineered to ensure your core business parameters lock premium prominence across local maps lists.</p>
             </div>
             <div class="card">
                 <h3>Absolute Speed & SEO</h3>
-                <p>Clean front-end source frameworks optimized perfectly for crawl engines and ultra-low load delays.</p>
+                <p>Clean front-end structural components optimized from the code level for high speeds and zero render latency.</p>
             </div>
         </div>
     </section>
 
+    <!-- 3. Dynamic Process Track -->
     <section id="process">
         <h2>Our Work Process</h2>
         <div class="grid-container">
-            <div class="card"><h3>1. Architecture Strategy</h3><p>We configure workflows, target aesthetics, and regional deployment metrics.</p></div>
-            <div class="card"><h3>2. Next-Gen Build</h3><p>We build optimized fluid layouts and embed technical parameters.</p></div>
-            <div class="card"><h3>3. Elite Deployment</h3><p>Your portal is verified, compiled, and deployed directly onto secure servers.</p></div>
+            <div class="card"><h3>1. Architecture Strategy</h3><p>We configure system targets, layout aesthetics, and local regional deployment paths.</p></div>
+            <div class="card"><h3>2. Luxury Build Phase</h3><p>We write clean responsive layouts and sync high-performance background logic loops.</p></div>
+            <div class="card"><h3>3. Elite Deployment</h3><p>Your systems are verified, compiled, and deployed directly onto top-tier web infrastructure.</p></div>
         </div>
     </section>
 
+    <!-- 4. Client Benefits -->
     <section id="benefits">
         <h2>Client Benefits</h2>
-        <p>✓ Complete transparent management operations.<br>✓ Advanced technical SEO features configured inside core elements.<br>✓ Responsive grid arrays adapted perfectly for dynamic screen rendering.</p>
+        <p>✓ Complete structural clear tracking operations.<br>✓ Multi-layer mobile responsiveness baked into raw layouts.<br>✓ Elements engineered cleanly for top position map packs and regional bots.</p>
     </section>
 
+    <!-- 5. FAQ Interface Accordion -->
     <section id="faq">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-item">
             <div class="faq-question">Why should I choose The Prachar Setu? <span>+</span></div>
-            <div class="faq-answer">Founded by Narayan Kumar Vaishnav, we deliver top-tier luxury design languages combined with high-impact computational tools like custom AI systems to completely win your local search space.</div>
+            <div class="faq-answer">Founded by technical developer Narayan Kumar Vaishnav, we mix luxury design aesthetics with advanced workflow frameworks to help businesses scale their presence completely.</div>
         </div>
         <div class="faq-item">
             <div class="faq-question">Will my website work on mobile? <span>+</span></div>
-            <div class="faq-answer">Yes, our entire code base follows absolute mobile-first architecture rules to ensure zero presentation flaws on mobile screens.</div>
+            <div class="faq-answer">Yes, our complete UI follows strict fluid grid rules to make sure components scale cleanly on smartphones, tablets, and desktop displays.</div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">Do you provide AI Automation services? <span>+</span></div>
-            <div class="faq-answer">Yes. We specialize in custom WhatsApp automation modules, customer-facing support AI bots, automated CRM flows, and smart email operation loops.</div>
+            <div class="faq-question">Do you provide custom AI Automations? <span>+</span></div>
+            <div class="faq-answer">Yes. We specialize in custom WhatsApp business APIs, support chatbots, complex CRM triggers, and automated notification scripts.</div>
         </div>
     </section>
 
+    <!-- Comprehensive SEO Anchor Footer Base -->
     <footer>
         <p>© 2026 The Prachar Setu. Powered by Narayan Kumar Vaishnav.</p>
-        <p class="seo-hidden-text">Serving regional hubs: Pathalgaon, Jashpur, Raigarh, Ambikapur, Sarguja, Raipur, Bilaspur, Rajnandgaon, Bhilai, Pandripani, Tapkara, Bagbahar, Odisha, and Chhattisgarh.</p>
+        <p class="seo-hidden-text">Regional Target Scope: Pathalgaon, Jashpur, Raigarh, Ambikapur, Sarguja, Raipur, Bilaspur, Rajnandgaon, Bhilai, Pandripani, Tapkara, Bagbahar, Odisha, and Chhattisgarh.</p>
     </footer>
 
-    <!-- Fixed Frame-Scrubber Logic Script (Apple/BMW Frame Interpolation Mode) -->
+    <!-- Heavy-Duty Hardware Stabilized Mobile Frame Scrubber Script -->
     <script>
         const video = document.getElementById('bgVideo');
         let targetTime = 0;
         let currentTime = 0;
 
-        // Force browser cache container verification
-        video.load();
+        if (video) {
+            video.load();
+            video.pause();
+        }
 
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.scrollY;
+        // Clean calculation wrapper across absolute page height parameters
+        function calculateScrollFrame() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const docHeight = document.documentElement.scrollHeight - window.innerHeight;
             
-            // Safety parameter block to prevent division by zero anomalies
+            // Protect framework against zero boundary calculations
             const scrollFraction = docHeight > 0 ? (scrollTop / docHeight) : 0;
             
-            if (video.duration) {
-                targetTime = video.duration * scrollFraction;
+            if (video && video.duration) {
+                // Safeguards the exact maximum frame bounds to stop video drops near footers
+                targetTime = Math.min(Math.max(video.duration * scrollFraction, 0), video.duration - 0.02);
             }
-        });
+        }
 
-        function renderLoop() {
-            // Smoothly tracks forward or backward based on scroll calculations
-            currentTime += (targetTime - currentTime) * 0.15;
+        // Bind passive event updates to eliminate layout scrolling jitter
+        window.addEventListener('scroll', calculateScrollFrame, { passive: true });
+        window.addEventListener('resize', calculateScrollFrame, { passive: true });
+
+        // Linear interpolation processing loop for fluid performance shifts
+        function fluidPlaybackEngine() {
+            currentTime += (targetTime - currentTime) * 0.12;
             
-            if (video.duration && Math.abs(currentTime - video.currentTime) > 0.03) {
+            if (video && video.duration && Math.abs(currentTime - video.currentTime) > 0.01) {
                 video.currentTime = currentTime;
             }
             
-            requestAnimationFrame(renderLoop);
+            requestAnimationFrame(fluidPlaybackEngine);
         }
 
-        // Initialize frame rendering engine loops
-        requestAnimationFrame(renderLoop);
+        // Initialize frame tracking render tree
+        requestAnimationFrame(fluidPlaybackEngine);
     </script>
 </body>
 </html>
