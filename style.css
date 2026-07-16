@@ -1,4 +1,4 @@
-* {
+here* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,11 +7,12 @@
 }
 
 body {
-    background-color: #FFFFFF;
-    color: #1A1A1A;
+    background-color: #0A192F; /* Deep Luxury Blue background to hold the canvas structure */
+    color: #FFFFFF;
     overflow-x: hidden;
 }
 
+/* Luxury Full Page Video Canvas Layer */
 .video-background {
     position: fixed;
     top: 0;
@@ -35,10 +36,11 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.4);
+    background: linear-gradient(180deg, rgba(10, 25, 47, 0.3) 0%, rgba(10, 25, 47, 0.7) 100%);
     z-index: -1;
 }
 
+/* Premium Navigation Frame */
 nav {
     position: fixed;
     top: 0;
@@ -47,7 +49,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(10, 25, 47, 0.8);
     backdrop-filter: blur(20px);
     z-index: 100;
     border-bottom: 3px solid #FFD700;
@@ -56,12 +58,16 @@ nav {
 .logo {
     font-size: 22px;
     font-weight: 900;
-    color: #1A1A1A;
+    color: #FFFFFF;
     letter-spacing: 1px;
 }
 
+.logo span {
+    color: #FFD700;
+}
+
 .nav-links a {
-    color: #1A1A1A;
+    color: #FFFFFF;
     text-decoration: none;
     margin-left: 20px;
     font-weight: 700;
@@ -73,21 +79,14 @@ nav {
     color: #FFD700;
 }
 
+/* Completely transparent Apple/BMW immersive text layouts */
 section {
     min-height: 100vh;
-    padding: 120px 8% 60px 8%;
+    padding: 140px 8% 80px 8%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.94);
-    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-}
-
-.hero-section {
-    background: transparent;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+    background: transparent; /* Allows video execution to stay visible across the whole page scroll */
 }
 
 h1 {
@@ -95,6 +94,7 @@ h1 {
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 20px;
+    color: #FFFFFF;
 }
 
 h2 {
@@ -103,6 +103,7 @@ h2 {
     margin-bottom: 40px;
     position: relative;
     display: inline-block;
+    color: #FFFFFF;
 }
 
 h2::after {
@@ -116,18 +117,18 @@ h2::after {
 }
 
 .highlight {
-    background: linear-gradient(180deg, transparent 50%, #FFD700 50%);
-    padding: 0 5px;
+    color: #FFD700;
 }
 
 p {
     font-size: 1.1rem;
     line-height: 1.7;
     max-width: 700px;
-    color: #444444;
+    color: #E2E8F0;
     margin-bottom: 30px;
 }
 
+/* Cards configured with transparent White/Blue frost glow filters */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -137,24 +138,26 @@ p {
 }
 
 .card {
-    background: #FFFFFF;
-    border: 2px solid #FFFFFF;
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     padding: 30px;
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     transition: all 0.4s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
     border-color: #FFD700;
-    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.15);
+    background: rgba(10, 25, 47, 0.6);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
 }
 
 .card h3 {
     font-size: 1.4rem;
     margin-bottom: 15px;
     font-weight: 800;
+    color: #FFD700;
 }
 
 .card ul {
@@ -165,7 +168,7 @@ p {
 .card ul li {
     padding: 6px 0;
     font-size: 0.95rem;
-    color: #555555;
+    color: #E2E8F0;
     position: relative;
     padding-left: 15px;
 }
@@ -177,30 +180,32 @@ p {
     color: #FFD700;
 }
 
+/* Interface Action Buttons */
 .btn {
     display: inline-block;
     padding: 16px 36px;
-    background-color: #1A1A1A;
+    background-color: transparent;
     color: #FFFFFF;
     text-decoration: none;
     font-weight: 700;
     border-radius: 50px;
-    border: 2px solid #1A1A1A;
+    border: 2px solid #FFFFFF;
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .btn-primary {
     background-color: #FFD700;
-    color: #1A1A1A;
+    color: #0A192F;
     border-color: #FFD700;
 }
 
 .btn:hover {
     transform: scale(1.03);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
 }
 
+/* Contact Inputs wrapped in custom Frost layers */
 form {
     max-width: 600px;
     width: 100%;
@@ -212,21 +217,34 @@ form {
 input, select, textarea {
     width: 100%;
     padding: 16px;
-    border: 2px solid #E0E0E0;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    background: #FFFFFF;
+    background: rgba(255, 255, 255, 0.05);
+    color: #FFFFFF;
     font-size: 1rem;
     outline: none;
     transition: border-color 0.3s;
 }
 
-input:focus, select:focus, textarea:focus {
-    border-color: #FFD700;
+input::placeholder, textarea::placeholder {
+    color: #A0AEC0;
 }
 
+option {
+    background: #0A192F;
+    color: #FFFFFF;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #FFD700;
+    background: rgba(10, 25, 47, 0.9);
+}
+
+/* FAQ Layout elements */
 .faq-item {
-    background: #FFFFFF;
-    border: 1px solid #E0E0E0;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
     border-radius: 8px;
     margin-bottom: 15px;
     overflow: hidden;
@@ -236,31 +254,32 @@ input:focus, select:focus, textarea:focus {
     padding: 20px;
     font-weight: 700;
     cursor: pointer;
-    background: #FFFFFF;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #FFFFFF;
 }
 
 .faq-answer {
     padding: 0 20px 20px 20px;
-    color: #555555;
+    color: #E2E8F0;
     line-height: 1.6;
 }
 
 .seo-hidden-text {
     font-size: 0.85rem;
-    color: #888888;
+    color: #A0AEC0;
     margin-top: 40px;
     line-height: 1.5;
 }
 
 footer {
-    background: #1A1A1A;
+    background: rgba(10, 25, 47, 0.95);
     color: #FFFFFF;
-    padding: 40px 8%;
+    padding: 60px 8% 40px 8%;
     text-align: center;
     font-weight: 600;
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
 }
 
 @media (max-width: 768px) {
