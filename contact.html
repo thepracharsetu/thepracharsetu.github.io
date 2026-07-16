@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Hire Web and SEO Experts | The Prachar Setu</title>
+    <meta name="description" content="Submit your details to hire Narayan Kumar Vaishnav. Expert deployment across Pathalgaon, Jashpur, Raigarh, Ambikapur, Sarguja, Raipur, Bilaspur, Rajnandgaon, Bhilai, Odisha, and Chhattisgarh.">
+    <meta name="keywords" content="Hire Web Developer Pathalgaon, Google Business Manager Jashpur, SEO Specialist Raigarh, AI Automation Raipur, The Prachar Setu Phone Number, Email contact">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">THE PRACHAR SETU</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+    </nav>
+
+    <section style="background: #FFFFFF;">
+        <h2>Connect With Us</h2>
+        <p><strong>📍 Service Footprint:</strong> Pathalgaon, Jashpur, Raigarh, Ambikapur, Sarguja, Raipur, Bilaspur, Rajnandgaon, Bhilai, Pandripani, Tapkara, Bagbahar, Odisha, Chhattisgarh, and all over India.</p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 40px; width: 100%;">
+            
+            <form id="contactForm" onsubmit="return validateForm(event)">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="tel" id="phone" placeholder="Phone Number (10 digits)" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                
+                <select id="service" required>
+                    <option value="">Select Service Needed</option>
+                    <option value="web">Website Development (New / Redesign / Maintenance)</option>
+                    <option value="gbp">Google Business Profile & Map SEO</option>
+                    <option value="marketing">Digital Marketing & Leads</option>
+                    <option value="automation">AI Automation (WhatsApp / Workflow)</option>
+                    <option value="creative">AI Imagery & Video Ads</option>
+                    <option value="branding">Branding & Technical SEO</option>
+                    <option value="design">Graphic Design & Media Editing</option>
+                </select>
+
+                <input type="text" id="budget" placeholder="Budget Variant (Optional)">
+                <textarea id="requirement" placeholder="Describe your exact development needs" rows="4" required></textarea>
+                
+                <button type="submit" class="btn btn-primary">Submit To Team</button>
+            </form>
+
+            <div style="flex: 1; min-width: 280px; display: flex; flex-direction: column; gap: 20px;">
+                <div class="card">
+                    <h3>Official Channels</h3>
+                    <p>📧 <strong>thepracharsetu@gmail.com</strong></p>
+                    <p>📷 Instagram: @ThePracharSetu</p>
+                    <p>▶️ YouTube: The Prachar Setu</p>
+                    <p>💬 WhatsApp Connected</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://instagram.com" target="_blank" style="position: fixed; bottom: 20px; right: 20px; background: #FFD700; color:#1A1A1A; padding:15px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 4px 15px rgba(0,0,0,0.2); z-index:999;">Instagram Support</a>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phoneRegex = /^[0-9]{10}$/;
+
+            if (!phone || !email) {
+                alert('Validation Failure: Phone and email details must be complete.');
+                return false;
+            }
+            if (!phoneRegex.test(phone)) {
+                alert('Formatting Error: Phone fields require an exact 10-digit number entry.');
+                return false;
+            }
+
+            alert('Transmission Success! The team under Narayan Kumar Vaishnav will review your details shortly.');
+            document.getElementById('contactForm').reset();
+            return true;
+        }
+    </script>
+</body>
+</html>
